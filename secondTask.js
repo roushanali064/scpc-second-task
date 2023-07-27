@@ -82,4 +82,15 @@ function TwoNumbersWithTargetSum(arr, target) {
   }
   const calculateResult  = calculator(5,4,'+');
   console.log(calculateResult);
-
+//Task 6: Create a program that generates a random password of a specified length. The password should include a mix of uppercase letters, lowercase letters, numbers, and special characters.
+function generatePassword(){
+    const chars = '0123456789abcdefghijklmnopqrstuvwxyz!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    const passwordLength = 8;
+    let password = '';
+    for(let i = 0; i <=passwordLength; i++){
+        const randomNumber = Math.floor(Math.random()*chars.length)
+        password += chars.substring(randomNumber, randomNumber +1);
+    }
+    console.log(password)
+}
+generatePassword()
