@@ -125,4 +125,21 @@ function romanToInt(roman) {
   }
 
   console.log(romanToInt("IV"));
+//Task 8: Implement a JavaScript function to find the second smallest element in an array of numbers. The function should return the second smallest number.
+function secondSmallestNumber(arr) {
+    let smallest = Infinity;
+    let secondSmallest = Infinity;
   
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] < smallest) {
+        secondSmallest = smallest;
+        smallest = arr[i];
+      } else if (arr[i] < secondSmallest && arr[i] !== smallest) {
+        secondSmallest = arr[i];
+      }
+    }
+    return secondSmallest;
+  }
+  
+const theNumber = [10,20,30,40,50,60,70,80,90];
+console.log(secondSmallestNumber(theNumber));
