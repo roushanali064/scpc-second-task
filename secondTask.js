@@ -71,4 +71,15 @@ function TwoNumbersWithTargetSum(arr, target) {
   const target = 9;
   const targetSumResult = TwoNumbersWithTargetSum(arr, target);
   console.log(targetSumResult);
-  
+  //Task 5: Implement a simple JavaScript calculator. The calculator should take two numbers and an operator (+, -, *, /) as input and return the result of the operation.
+  function calculator(num1,num2,operator){
+    const calculate = operator === '+' ? num1+num2:
+    operator === '-' ? num1-num2:
+    operator === '*' ? num1*num2:
+    operator === '/' ? num2 === 0 ? '0 not divided':  num1/num2:
+    'please provide this operator(+,-,*,/)';
+    return calculate
+  }
+  const calculateResult  = calculator(5,4,'+');
+  console.log(calculateResult);
+
