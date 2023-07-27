@@ -20,3 +20,30 @@ function calculatePositiveNumber(arr){
 const numberArray = [2, -5, 10, -3, 7];
 const positiveNumberSumResult =  calculatePositiveNumber(numberArray);
 console.log(positiveNumberSumResult);
+//Task 3: Write a JavaScript program to find the most frequent element in an array and return it. 
+function mostFrequentNumber(arr) {
+    const mostNumberMap = {};
+    for (let i = 0; i < arr.length; i++) {
+        const item = arr[i];
+        if (mostNumberMap[item]) {
+            mostNumberMap[item]++;
+        } else {
+            mostNumberMap[item] = 1;
+        }
+    }
+    let mostFrequentElementNumber;
+    let maxFrequencyNumber = 0;
+    for (const key in mostNumberMap) {
+        if (mostNumberMap[key] > maxFrequencyNumber) {
+            mostFrequentElementNumber = key;
+            maxFrequencyNumber = mostNumberMap[key];
+        }
+    }
+
+    return mostFrequentElementNumber;
+}
+
+const inputArray = [3, 5, 2, 5, 3, 3, 1, 4, 5];
+const mostFrequent = mostFrequentNumber(inputArray);
+console.log(mostFrequent);
+ 
